@@ -1,1 +1,2 @@
-# namaste-react
+# namaste-react 
+# igniting the app
