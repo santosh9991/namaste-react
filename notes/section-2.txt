@@ -1,0 +1,28 @@
+before an app goes to production pre-processing and optimization is required like removing the comments, code minification, 
+code splitting, chenking, image optimization, compress the code etc and bundling of code.
+What is needed to make an application production ready
+
+There are lot of other things we need to make our App fast
+we need to init npm to use npm to import pacakges into our project. npm manages packages that we are going to install in 
+package.json is a configuration for npm
+- Our app may be depenedent on few pacakages to run. These are package dependecies.
+npm will take care of it.
+
+Most important package is bundler.
+It helps in bundling the project. webpack, wheat, parcel
+packages the app properly so that it can be push to prod. Create react app uses a webpack and bable bundler.
+
+we can get parcel into our app by using npm. 
+
+There are two types of dependencies that we can have
+dev depencies and other is normal dependency
+dev depencies - when we are developing app
+we will install parcel as a dev depency. we can atcheive it using npm i -D package-name
+^ symbol help manage minor versions. If there is any miror version upgrates happen parcel will upgrate autometically
+~ will updgrate the major version. 
+
+package-lock.json - keeps the track of exact version that is being installed. Keeps the record of the package or the dependency that is being installed
+node_modules will have all the code/ packages needed for our project
+package.json is like a configuration and node_modules is like a db
+transitive dependency - ex: when we install parcel we get lot of other pacakfges which are depenedent on parcel. These packages are called
+transitive dependency
