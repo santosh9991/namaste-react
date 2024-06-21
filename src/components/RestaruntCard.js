@@ -9,12 +9,12 @@ const RestaruntCard = (props) => {
       cloudinaryImageId,
     } = resData;
     return (
-      <div className="res-card">
+      <div className="m-4 p-4 w-[200px] bg-gray-50 rounded-lg hover:bg-gray-100">
         <img
-          className="res-logo"
+          className="rounded-lg"
           src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
         ></img>
-        <h3>{name}</h3>
+        <h3 className="font-bold py-2 text-lg">{name}</h3>
         <h4>{cuisines.join(", ")}</h4>
         <h4> {avgRating} Stars</h4>
         <h4>{costForTwo}</h4>
@@ -22,5 +22,14 @@ const RestaruntCard = (props) => {
       </div>
     );
   };
+
+  export const withPramotedLabel = (RestaruntCard)=>{
+    return (props)=>{
+      <div>
+        <label>Pramoted </label>
+        <RestaruntCard {...props}/>
+      </div>
+    }
+  }
 
   export default RestaruntCard;
