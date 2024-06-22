@@ -1,3 +1,5 @@
+import { CDN_URL } from "../utils/constants";
+
 const RestaruntCard = (props) => {
     const { resData } = props;
     const {
@@ -12,7 +14,7 @@ const RestaruntCard = (props) => {
       <div className="m-4 p-4 w-[200px] bg-gray-50 rounded-lg hover:bg-gray-100">
         <img
           className="rounded-lg"
-          src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
+          src={`${CDN_URL}${cloudinaryImageId}`}
         ></img>
         <h3 className="font-bold py-2 text-lg">{name}</h3>
         <h4>{cuisines.join(", ")}</h4>

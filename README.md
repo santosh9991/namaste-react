@@ -21,3 +21,26 @@
 - Tree Shaking - removes unused code for u
 - Different dev and production build
 - 
+
+
+/**
+ *
+ * - Header
+ *      - Logo
+ *      - navbar
+ * - Body
+ *      - RestroContainer
+ *          - RestroCards
+ *              - img
+ *              - Name of Res, Star Rating, cuisines, delivery time.
+ * - Footer
+ *      - copyright
+ *
+ */
+
+
+
+ #React Hooks
+ - utiliy functions provided by js.
+ - useState() - powerful 
+ - , useEffect()

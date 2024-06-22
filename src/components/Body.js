@@ -1,19 +1,24 @@
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RestaruntCard, { withPramotedLabel } from "../components/RestaruntCard";
 import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
     const [filteredRestraurent, setFilteredRestaurant] = useState([]);
     const [searchText, setSearchText] = useState('');
+    const {setUserName } = useContext(UserContext)
     const RestaruntCardPramoted = withPramotedLabel()
     const handleSearch = () =>{
       const updatedList = listOfRestaurants.filter((restaurant)=>restaurant.info.avgRating>4.1)
       setListOfRestaurants(updatedList)
+    }
+    const handleUserName = (e) =>{
+      setUserName(e.target.value)
     }
     //fetch the data
     const fetchData = async () =>{
@@ -53,6 +58,10 @@ const Body = () => {
           <button className="px-4 py-2 bg-gray-100 rounded-lg" onClick={handleSearch}>
           Top Rated Restarunt
             </button>
+          </div>
+          <div className="m-4 flex items-center">
+            <label>userName: </label>
+            <input className="border border-black m-4" onChange={handleUserName}/>
           </div>
         </div>
         
